@@ -21,7 +21,7 @@ __phpunit_single_test () {
 
     PHPUNIT_OUTPUT="$($CUSTOM_BIN_DIR/phpunit -c $PHPUNIT_CONF $1)"
     if ! echo "$PHPUNIT_OUTPUT" | grep -q "OK"; then
-        print_error "$PHPUNIT_OUTPUT"
+        __print_error "$PHPUNIT_OUTPUT"
         exit 1
     fi
 }
