@@ -26,7 +26,7 @@ _fetch_repository() {
 
 _link_binaries() {
 	mkdir -p $TARGET &&
-    ln -s $BINDIR/effix $TARGET/effix 2>/dev/null || true
+	ln -s $BINDIR/effix $TARGET/effix 2>/dev/null || true
 }
 
 _fetch_repository &&
