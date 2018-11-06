@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+
+EFFIX_CONF=".effix.conf"
+PROJECT_DIR="$(pwd)"
+BASEDIR="$(cd $(dirname "$0"); cd ..; pwd)"
+DEBUG=false
+VERBOSITY=1
+
+# Load stuff
+source $BASEDIR/libexec/effix/colors.sh
+source $BASEDIR/libexec/effix/recipes.sh
+source $BASEDIR/libexec/effix/init.sh
+source $BASEDIR/libexec/effix/test.sh
+
+print_help () {
+    echo "Usage:"
+    echo
+    echo "test      - Run scripts in $EFFIX_CONF."
+    echo "init      - Create $EFFIX_CONF file."
+    echo "recipes   - Show recipes"
+}
+
+print_command_not_found () {
+    echo "ERROR: command not found"
+    echo "Use: effix help for more info"
+}
+
+[ "$2" == '-v' ] && DEBUG=true
+
+if [ "$2" == '-vv' ]; then
+    DEBUG=true
+    VERBOSITY=2
+fi
+
+
+case $1 in
+    test)
+        _test
+    shift
+    ;;
+    init)
+        _init &&
+        __print_success "Initialized configuration file in $PROJECT_DIR/$EFFIX_CONF"
+    shift
+    ;;
+    recipes)
+        _print_recipes
+    shift
+    ;;
+    -h|help)
+        print_help
+    shift
+    ;;
+    *)
+        print_command_not_found && exit 1
+    ;;
+esac
