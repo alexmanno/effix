@@ -2,7 +2,8 @@
 
 EFFIX_CONF=".effix.conf"
 PROJECT_DIR="$(pwd)"
-BASEDIR="$(cd $(dirname "$0"); cd ..; pwd)"
+: ${LOCAL:=$HOME/.effix}
+BASEDIR="$LOCAL"
 DEBUG=false
 VERBOSITY=1
 
