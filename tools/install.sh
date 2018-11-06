@@ -26,11 +26,7 @@ _fetch_repository() {
 
 _link_binaries() {
 	mkdir -p $TARGET &&
-	for file in $BINDIR/*.sh; do
-		local cmd=${file##*/}
-		cmd=${cmd%.sh}
-		ln -s $file $TARGET/$cmd 2>/dev/null || true
-	done
+    ln -s $BINDIR/effix $TARGET/effix 2>/dev/null || true
 }
 
 _fetch_repository &&
