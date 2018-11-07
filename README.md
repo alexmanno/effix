@@ -2,6 +2,10 @@
 
 Test your local changes before commit.
 
+[![Build Status](https://travis-ci.org/alexmanno/effix.svg?branch=master)](https://travis-ci.org/alexmanno/effix)
+[![GitHub license](https://img.shields.io/github/license/alexmanno/effix.svg)](https://github.com/alexmanno/effix)
+[![GitHub stars](https://img.shields.io/github/stars/alexmanno/effix.svg)](https://github.com/alexmanno/effix/stargazers)
+
 ## Installation
 ```sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/alexmanno/effix/master/tools/install.sh)"
