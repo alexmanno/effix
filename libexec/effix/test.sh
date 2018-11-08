@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 __read_conf () {
     if [ ! -f "$PROJECT_DIR/$EFFIX_CONF" ]; then

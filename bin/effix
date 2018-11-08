@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 EFFIX_CONF=".effix.conf"
 PROJECT_DIR="$(pwd)"
