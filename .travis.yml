@@ -1,4 +1,4 @@
 language: bash
 
 script:
-- bash tests/run-tests.sh
+- tests/run-tests.sh

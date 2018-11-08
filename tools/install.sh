@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 : ${REMOTE:=https://github.com/alexmanno/effix.git}
 : ${LOCAL:=$HOME/.effix}

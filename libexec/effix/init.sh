@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 _init () {
     cat > $PROJECT_DIR/$EFFIX_CONF <<EOL

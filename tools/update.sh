@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 : ${SCRIPT:=https://raw.githubusercontent.com/alexmanno/effix/master/tools/install.sh}
 
