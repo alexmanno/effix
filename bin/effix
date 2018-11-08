@@ -35,7 +35,7 @@ fi
 
 
 case $1 in
-    test)
+    test|check)
         _test
     shift
     ;;
@@ -48,7 +48,7 @@ case $1 in
         _print_recipes
     shift
     ;;
-    -h|help)
+    help|--help|-h)
         print_help
     shift
     ;;
