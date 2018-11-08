@@ -13,7 +13,7 @@ __print_debug_command () {
     __print_info "DEBUG: $1"
 }
 __read_files () {
-    FILES=$(git diff --name-only)
+    FILES=$(git status | egrep "new file|modified" | sed 's/.*:\ *//g' | sort | uniq)
 }
 
 __exec_cmd () {
